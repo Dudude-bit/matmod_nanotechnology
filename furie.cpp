@@ -16,6 +16,7 @@ int main() {
     int N = 8;
     float a = 0, b = 10;
     long double A[N][N], A_T[N][N], f[N], x[N], Y[N], E[N], D[N];
+    long double sum = 0;
     float h = (b - a) / N;
     for (int i = 0; i < N; i++){
         for (int j = 0; j < N; j++) {
@@ -48,5 +49,8 @@ int main() {
         D[i] = E[i] - f[i];
     }
 
-
+    for (int j = 0; j < N; j++) {
+        sum += A[5][j] * A[5][j];
+    }
+    cout << sum;
 }
