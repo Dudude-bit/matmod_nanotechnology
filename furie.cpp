@@ -1,56 +1,19 @@
-#include "math.h"
-#include "iostream"
+#include "cmath"
 
 using namespace std;
 
-
-float F(float x) {
-    return (10 - x) * x * exp(-pow(x, 0.5));
-}
-
-long double g(float i, float k, float N) {
-    return sqrt(2 / N) * sin((M_PI / N) * i * k);
-}
-
-int main() {
-    int N = 8;
-    float a = 0, b = 10;
-    long double A[N][N], A_T[N][N], f[N], x[N], Y[N], E[N], D[N];
-    long double sum = 0;
-    float h = (b - a) / N;
-    for (int i = 0; i < N; i++){
-        for (int j = 0; j < N; j++) {
-            A[i][j] = g(i, j, N);
-            A_T[j][i] = A[i][j];
-        }
-    }
-
-    for (int i = 0; i < N; i++) {
-        x[i] = i * h;
-    }
-
-    for (int i = 0; i < N; i++) {
-        f[i] = F(x[i]);
-    }
-
-    for (int i = 0; i < N; i++) {
-        for (int j = 0; j < N; j++){
-            Y[i] += A[i][j] * f[j];
-        }
-    }
-
-    for (int i = 0; i < N; i++) {
-        for (int j = 0; j < N; j++){
-            E[i] += A_T[i][j] * Y[j];
-        }
-    }
-
-    for (int i = 0; i < N; i++) {
-        D[i] = E[i] - f[i];
-    }
-
-    for (int j = 0; j < N; j++) {
-        sum += A[5][j] * A[5][j];
-    }
-    cout << sum;
-}
+//int main() {
+//    string chr;
+//    int i;
+//    double A[N], B[N];
+//    for (i = 0; i < N; i++) {
+//         cin >> chr;
+//         A[i] = stod(chr);
+//    }
+//    furier(A, B);
+//    furier(B, A);
+//
+//    for (i = 0; i < N; i++){
+//        cout << A[i] << endl;
+//    }
+//}

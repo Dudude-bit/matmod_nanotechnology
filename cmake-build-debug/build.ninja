@@ -46,8 +46,8 @@ cmake_ninja_workdir = /Users/kiinyakin/CLionProjects/matmod_nanotechnology/cmake
 
 build cmake_object_order_depends_target_main: phony || CMakeFiles/main.dir
 
-build CMakeFiles/main.dir/furie.cpp.o: CXX_COMPILER__main_Debug /Users/kiinyakin/CLionProjects/matmod_nanotechnology/furie.cpp || cmake_object_order_depends_target_main
-  DEP_FILE = CMakeFiles/main.dir/furie.cpp.o.d
+build CMakeFiles/main.dir/main.cpp.o: CXX_COMPILER__main_Debug /Users/kiinyakin/CLionProjects/matmod_nanotechnology/main.cpp || cmake_object_order_depends_target_main
+  DEP_FILE = CMakeFiles/main.dir/main.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.1 -std=gnu++14
   OBJECT_DIR = CMakeFiles/main.dir
   OBJECT_FILE_DIR = CMakeFiles/main.dir
@@ -60,7 +60,7 @@ build CMakeFiles/main.dir/furie.cpp.o: CXX_COMPILER__main_Debug /Users/kiinyakin
 #############################################
 # Link the executable main
 
-build main: CXX_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/furie.cpp.o
+build main: CXX_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/main.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.1
   OBJECT_DIR = CMakeFiles/main.dir
   POST_BUILD = :
